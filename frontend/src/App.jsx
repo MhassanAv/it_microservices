@@ -1,7 +1,6 @@
 import {
   Card,
   CardBody,
-  CardHeader,
   Center,
   Heading,
   VStack,
@@ -62,17 +61,7 @@ function App() {
         h="100%"
         bgGradient={"linear(to-t, teal.500, blackAlpha.500)"}
       >
-        <Card align={"center"} minW="30vw" rounded="2rem" justify={"center"}>
-          <CardHeader>
-            <Heading
-              fontSize="1.5rem"
-              fontWeight={"bold"}
-              textTransform={"uppercase"}
-              color={"teal"}
-            >
-              Translator
-            </Heading>
-          </CardHeader>
+        <Card align={"center"} p='2.5rem' rounded="1rem" justify={"center"}>
           <CardBody
             w="full"
             display={"flex"}
@@ -90,6 +79,12 @@ function App() {
                   onChange={(e) => setText(e.target.value)}
                   placeholder="Your text here"
                   flex="3"
+                  border='1.5px solid teal'
+
+                 _placeholder={{
+                  color:'blackAlpha.500'
+                 }
+                 }
                 />
                 <Menu>
                   <MenuButton
